@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <h1 style="text-align: left; color: #4617db"><font size="7">Profile</font></h1>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<p>Username:{{(profileData | async)?.username}}</p>
+<p>First Name:{{(profileData | async)?.firstName}}</p>
+<p>Last Name :{{(profileData | async)?.lastName}}</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div>
+  <a><ion-button color="danger"  routerLink='/login'>Logout</ion-button></a>
+</div>
+</ion-content>

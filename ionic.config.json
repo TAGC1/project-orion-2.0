@@ -1,0 +1,8 @@
+{
+  "name": "Sclass",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,102 @@
+<ion-header>
+  <ion-toolbar>
+      <h1 style="text-align: left; color: #4617db"><font size="7">Login</font></h1>
+  </ion-toolbar>
+</ion-header>
+
+
+    <ion-content padding='true' class="ion-align-items-center" >
+
+        
+        
+      <h1>Sign In</h1>
+<ion-grid>
+  <ion-row>
+    <ion-col size-md="6" offset-md="3">
+      <ion-slides  pager="true">
+        <ion-slide>
+          <ion-card>
+            <ion-card-content>
+              <ion-card-title>
+                Student Login
+              </ion-card-title>
+             <form>
+               <ion-list>
+               <ion-item>
+               <ion-label position="stacked">Email</ion-label>
+               <ion-input autocomplete="off" type="text" [(ngModel)]="email" name="email" ></ion-input>
+               </ion-item>
+               
+               <ion-item>
+               <ion-label position="stacked">Password</ion-label>
+               <ion-input autocomplete="off" type="password" [(ngModel)]="password" name="password"></ion-input>
+               </ion-item>
+               </ion-list>
+               <ion-button expand="block" share="round" color="primary" (click)="loginUser();">Login</ion-button>
+                           <ion-button expand="block" share="round" color="secondary" routerLink='/signup'>Create Account</ion-button>
+             </form> 
+             <ion-text>Swipe Left to access Teacher and Admin Login </ion-text>
+            </ion-card-content>
+          </ion-card>
+
+        </ion-slide>
+        <ion-slide>
+          <ion-card>
+            <ion-card-content>
+              <ion-card-title>
+                Teacher Login
+              </ion-card-title>
+             <form>
+               <ion-list>
+               <ion-item>
+               <ion-label position="stacked">Email</ion-label>
+               <ion-input autocomplete="off" type="text" [(ngModel)]="email" name="email" ></ion-input>
+               </ion-item>
+               
+               <ion-item>
+               <ion-label position="stacked">Password</ion-label>
+               <ion-input autocomplete="off" type="password" [(ngModel)]="password" name="password"></ion-input>
+               </ion-item>
+               </ion-list>
+               <ion-button expand="block" share="round" color="primary" (click)="loginUser();">Login</ion-button>
+                           <ion-button expand="block" share="round" color="secondary" routerLink='/signup'>Create Account</ion-button>
+             </form> 
+             <ion-text>Swipe Left or Right to access Student and Admin Login </ion-text>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+        <ion-slide>
+          <ion-card>
+            <ion-card-content>
+              <ion-card-title>
+                Admin Login
+              </ion-card-title>
+             <form>
+               <ion-list>
+               <ion-item>
+               <ion-label position="stacked">Email</ion-label>
+               <ion-input autocomplete="off" type="text" [(ngModel)]="email" name="email" ></ion-input>
+               </ion-item>
+               
+               <ion-item>
+               <ion-label position="stacked">Password</ion-label>
+               <ion-input autocomplete="off" type="password" [(ngModel)]="password" name="password"></ion-input>
+               </ion-item>
+               </ion-list>
+               <ion-button expand="block" share="round" color="primary" (click)="loginUser();">Login</ion-button>
+                           <ion-button expand="block" share="round" color="secondary" routerLink='/signup'>Create Account</ion-button>
+             </form> 
+             <ion-text>Swipe Right to access Student and Teacher Login </ion-text>
+            </ion-card-content>
+          </ion-card>
+        </ion-slide>
+      </ion-slides>
+
+    </ion-col>
+  </ion-row>
+</ion-grid>
+        </ion-content>
+        
+
+
+
