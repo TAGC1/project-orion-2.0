@@ -24,10 +24,9 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 
+import { SocketIoModule, SocketIoConfig } from 'ng-socket-io';
 
-
-
-
+const config: SocketIoConfig = { url: 'http://localhost:8100', options: {} };
 
 
 @NgModule({
@@ -43,7 +42,8 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
      HttpClientModule,
      FormsModule,
     CalendarModule,
-  AngularFireDatabaseModule,],
+  AngularFireDatabaseModule,
+  SocketIoModule.forRoot(config),],
   providers: [
     StatusBar,
     SplashScreen,
