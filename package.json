@@ -45,6 +45,7 @@
     "ion2-calendar": "^3.0.0-rc.0",
     "ionic2-calendar": "^0.6.4",
     "moment": "^2.25.3",
+    "ngx-socket-io": "^3.2.0",
     "pusher": "^3.0.1",
     "pusher-js": "^5.1.1",
     "rxjs": "~6.5.1",

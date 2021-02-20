@@ -3,6 +3,8 @@ import { AngularFireDatabase, AngularFireObject } from '@angular/fire/database';
 import { Profile } from 'src/models/profile';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { ToastController } from '@ionic/angular';
+import { Socket } from 'ngx-socket-io';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
@@ -14,7 +16,8 @@ export class HomePage implements OnInit {
 
   constructor(private afDatabase: AngularFireDatabase,
     private afAuth: AngularFireAuth,
-    public toastController: ToastController) { }
+    public toastController: ToastController,
+    private socket: Socket,) { }
 
   ionViewWillLoad(){
     this.afAuth.authState.subscribe(async data => {
@@ -42,6 +45,5 @@ export class HomePage implements OnInit {
   }
 
   ngOnInit() {
-  }
 
-}
+  }}
