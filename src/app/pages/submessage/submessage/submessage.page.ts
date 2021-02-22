@@ -32,12 +32,14 @@ export class SubmessagePage implements OnInit {
     });
  
     this.socket.fromEvent('message').subscribe(message => {
+      console.log('New: ', message);
       this.messages.push(message);
     });
   }
  
   sendMessage() {
     this.socket.emit('send-message', { text: this.message });
+    console.log('Sent:', this.message);
     this.message = '';
   }
  

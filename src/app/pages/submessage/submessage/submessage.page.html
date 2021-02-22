@@ -17,17 +17,19 @@
       <ion-col size="9" *ngIf="message.user !== currentUser" class="message other-message">
         <b>{{ message.user }}</b><br>
         <span>{{ message.msg }}</span>
-        <div class="time" text-right><br>{{ message.createdAt | date:'short' }}</div>
+        <div class="time" text-right><br>{{ message.createdAt | date:'long' }}</div>
       </ion-col>
  
       <ion-col offset="3" size="9" *ngIf="message.user === currentUser" class="message my-message">
         <b>{{ message.user }}</b><br>
         <span>{{ message.msg }}</span>
-        <div class="time" text-right><br>{{ message.createdAt | date:'short' }}</div>
+        <div class="time" text-right><br>{{ message.createdAt | date:'long' }}</div>
       </ion-col>
  
     </ion-row>
+    
   </ion-grid>
+  
 
 </ion-content>
 <ion-footer>
@@ -38,7 +40,7 @@
       </ion-col>
       <ion-col size="2">
         <ion-button expand="block" fill="clear" color="primary" [disabled]="message === ''" class="msg-btn" (click)="sendMessage()">
-          <ion-icon name="send" slot="icon-only"></ion-icon>
+          <ion-icon name="send" ></ion-icon>
         </ion-button>
       </ion-col>
     </ion-row>
