@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Sclass</string>
+    <string name="title_activity_main">Sclass</string>
+    <string name="package_name">sclass.ionic.beta</string>
+    <string name="custom_url_scheme">sclass.ionic.beta</string>
+</resources>
