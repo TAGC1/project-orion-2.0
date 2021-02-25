@@ -1,0 +1,32 @@
+.object{
+    position: absolute;
+    top: 75%;
+    vertical-align: middle;
+    height: auto;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    display:inline-block;
+    -webkit-animation: action 1s infinite  alternate;
+    animation: action 1s infinite  alternate;
+    margin-left: auto;
+    
+ 
+color: #4617db;
+ 
+ //margin-top: 25%;
+}
+.container{
+    display: flex;
+  justify-content: center;
+  margin-left: auto;
+}
+ 
+@-webkit-keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-30px); }
+}
+@keyframes action {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-30px); }
+}

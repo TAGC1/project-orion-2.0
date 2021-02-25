@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Messages</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <script defer src="http://localhost:8100/socket.io/socket.io.js"></script>
+  <script defer src="scripts.js"></script>
+  <form id="message-container">
+    <div class="input-bottom" id="message-container"> 
+      <ion-button type="submit" id="send-button">Send</ion-button>
+  
+      <ion-item>
+        
+        <ion-label position="floating">Message </ion-label>
+        <ion-input type="text" id="message-input"></ion-input>
+        
+      </ion-item>
+  
+    </div>
+  </form>
+
+</ion-content>
