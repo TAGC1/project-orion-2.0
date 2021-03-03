@@ -1,28 +1,65 @@
 <ion-header>
   <ion-toolbar>
-    <h1 style="text-align: left; color: #4617db"><font size="7">Profile</font></h1>
+    <ion-title>Settings</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-<p>Username:{{(profileData | async)?.username}}</p>
-<p>First Name:{{(profileData | async)?.firstName}}</p>
-<p>Last Name :{{(profileData | async)?.lastName}}</p>
 
+  <div class="card">
+    <div class="header">
+      <div class="avatar">
+        <img src="data:image/png;base64,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" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="user-meta ion-text-center">
+      <h3 class="playername"></h3>
+      <h5 class="country">Switzerland</h5>
+      <h6 class="ranking">Current ranking: <ion-chip>
+        <ion-label>2</ion-label>
+        </ion-chip>
+      </h6>
+    </div>
+    <ion-button expand="full" color="secondary">Landing page</ion-button>
+    <ion-button expand="full" color="secondary">Message Settings</ion-button>
+    <ion-button expand="full" color="secondary">Calendar Settings</ion-button>
+   
 
+    <ion-button expand="full" color="primary">Dark Mode</ion-button>
+  </div>
 
-
-
-
-
-
-
-
-
-
-
-
-  <div>
-  <a><ion-button color="danger"  routerLink='/login'>Logout</ion-button></a>
-</div>
 </ion-content>

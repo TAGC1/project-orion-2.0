@@ -17,12 +17,11 @@
 
 
             <ion-card button="true" routerLink='/submessage' >
-<ion-card-title>
-  NAME
-</ion-card-title>
-<ion-card-header>
-  MESSAGE
-</ion-card-header>
+              <ion-item>
+                <ion-label stacked>Set Nickname</ion-label>
+                <ion-input type="text" [(ngModel)]="nickname" placeholder="Nickname"></ion-input>
+              </ion-item>
+              <button ion-button full (click)="joinChat()" [disabled]="nickname === ''">Join Chat as {{ nickname }}</button>
               
             </ion-card>
             <ion-card>
