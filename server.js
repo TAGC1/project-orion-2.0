@@ -1,4 +1,4 @@
-const io = require('socket.io')(4200)
+const io = require('socket.io')(8100)
 
 io.on('connection', socket => {
     socket.emit('chat-message', 'Hello!')
