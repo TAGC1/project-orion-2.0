@@ -16,12 +16,12 @@
         <ion-searchbar showCancelButton="always"></ion-searchbar>
 
 
-            <ion-card button="true" routerLink='/submessage' >
+            <ion-card >
               <ion-item>
                 <ion-label stacked>Set Nickname</ion-label>
                 <ion-input type="text" [(ngModel)]="nickname" placeholder="Nickname"></ion-input>
               </ion-item>
-              <button ion-button full (click)="joinChat()" [disabled]="nickname === ''">Join Chat as {{ nickname }}</button>
+              <ion-button (click)="joinChat()"  [disabled]="nickname === ''" routerLink='/submessage' > Join Chat as {{ nickname }}</ion-button>
               
             </ion-card>
             <ion-card>
