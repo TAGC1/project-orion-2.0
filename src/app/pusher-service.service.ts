@@ -12,9 +12,9 @@ export class PusherServiceService {
 
   constructor(public http: HttpClient) {
 
-    let pusher = new Pusher('PUSHER_APP_KEY', {
+    let pusher = new Pusher('88d0654f5aef67a2c715', {
       authEndpoint: 'http://localhost:3128/pusher/auth',
-      cluster: 'PUSHER_APP_CLUSTER'
+      cluster: 'us3'
     });
 
     this.presenceChannel = pusher.subscribe('presence-channel');

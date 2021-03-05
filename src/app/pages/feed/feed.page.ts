@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController, AlertController } from '@ionic/angular';
+import { AlertController } from '@ionic/angular';
+import { PusherServiceService } from '../../pusher-service.service';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-feed',
@@ -26,11 +29,65 @@ export class FeedPage implements OnInit {
        'content': 'You can catch me on the express'
      }
    ];
+   
+
+   
+
+   
 
 
-  constructor(public navCtrl: NavController) { }
+  constructor(
+    public route: Router,
+     private pusher: PusherServiceService,
+     public alertCtrl: AlertController,  
+     private http: HttpClient) {
+    
+    
+    let self = this
+    this.presence_channel = this.pusher.init();
+    // update the list of users online
+    this.presence_channel.bind('pusher:subscription_succeeded', function (members) {
+      console.log(members);
+      self.users_online = members.members;
+      self.current_user = members.myID;
+    })
 
-  ngOnInit() {
+    this.presence_channel.bind('new-post', function (body) {
+      self.post_list.unshift(body);
+    })
+  }
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
   }
 
+  isOnline(username: string) {
+    // this function is responsible for determining if a user is online or not
+    if (username in this.users_online) {
+      return 'online'
+    } else {
+      return 'offline'
+    }
+  }
+
+
+  async submitPost() {
+    let self = this;
+    // make a post request to the server
+    let body = {
+      'username': this.current_user,
+      'content': this.post.content
+    }
+
+    //let alert = this.alertCtrl.create({
+   //   buttons: ['OK']
+  //  });
+  //  this.http.post('https://b3b88c11.ngrok.io/create-post', body).subscribe(() => {
+  //    alert.present();
+  //  });
+  }
+
+  get_users_online() {
+    return Object.keys(this.users_online).length - 1;
+  }
 }
+

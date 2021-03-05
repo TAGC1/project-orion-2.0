@@ -7,13 +7,13 @@
     const app = express();
 
     // initialize pusher
-    let pusher = new Pusher({
-        appId: 'PUSHER_APP_ID',
-        key: 'PUSHER_APP_KEY',
-        secret: 'PUSHER_APP_SECRET',
-        cluster: 'PUSHER_APP_CLUSTER',
-        useTLS: true,
-    });
+    const pusher = new Pusher({
+        appId: "1166655",
+        key: "88d0654f5aef67a2c715",
+        secret: "3efc19a1c0800992e6b0",
+        cluster: "us3",
+        useTLS: true
+      });
 
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: false }));
