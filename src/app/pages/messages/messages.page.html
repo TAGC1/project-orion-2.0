@@ -16,13 +16,12 @@
         <ion-searchbar showCancelButton="always"></ion-searchbar>
 
 
-            <ion-card button="true" routerLink='/submessage' >
-<ion-card-title>
-  NAME
-</ion-card-title>
-<ion-card-header>
-  MESSAGE
-</ion-card-header>
+            <ion-card >
+              <ion-item>
+                <ion-label stacked>Message Code</ion-label>
+                <ion-input type="text" [(ngModel)]="nickname" placeholder="Nickname"></ion-input>
+              </ion-item>
+              <ion-button (click)="joinChat()"  [disabled]="nickname === ''" routerLink='/submessage' > Code is {{ nickname }} ? </ion-button>
               
             </ion-card>
             <ion-card>

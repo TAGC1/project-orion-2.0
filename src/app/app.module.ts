@@ -26,6 +26,9 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 
 
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+
+import { PusherServiceService } from './pusher-service.service';
+
 const config: SocketIoConfig = { url: 'http://localhost:3001', options: {} };
 
 
@@ -54,6 +57,8 @@ SocketIoModule.forRoot(config),],
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
     HttpClient,
+    PusherServiceService,
+    
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent],
