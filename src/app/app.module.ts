@@ -24,6 +24,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 
@@ -51,14 +52,15 @@ const config: SocketIoConfig = { url: 'http://localhost:3001', options: {} };
      FormsModule,
     CalendarModule,
   AngularFireDatabaseModule,
-SocketIoModule.forRoot(config),],
+SocketIoModule.forRoot(config),
+AngularFirestoreModule,],
   providers: [
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy},
     HttpClient,
     PusherServiceService,
-    
+
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent],
