@@ -6,9 +6,7 @@ import { switchMap, map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
 
-@Injectable({
-  providedIn: 'root'
-})
+
 export interface User {
   uid: string;
   email: string;
