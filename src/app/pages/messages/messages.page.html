@@ -21,12 +21,10 @@
                 <ion-label stacked>Message Code</ion-label>
                 <ion-input type="text" [(ngModel)]="nickname" placeholder="Nickname"></ion-input>
               </ion-item>
-              <ion-button (click)="joinChat()"  [disabled]="nickname === ''" routerLink='/submessage' > Code is {{ nickname }} ? </ion-button>
+             
               
             </ion-card>
-            <ion-card>
-              
-            </ion-card>
+            <ion-button (click)="joinChat()"  [disabled]="nickname === ''" routerLink='/submessage.page' > Code is {{ nickname }} ? </ion-button>
 
       </ion-col>
     </ion-row>
