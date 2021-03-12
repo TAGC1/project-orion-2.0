@@ -19,12 +19,12 @@
             <ion-card >
               <ion-item>
                 <ion-label stacked>Message Code</ion-label>
-                <ion-input type="text" [(ngModel)]="nickname" placeholder="Nickname"></ion-input>
+                <ion-input type="text" [(ngModel)]="nickname" placeholder="Code"></ion-input>
               </ion-item>
              
               
             </ion-card>
-            <ion-button (click)="joinChat()"  [disabled]="nickname === ''" routerLink='/submessage.page' > Code is {{ nickname }} ? </ion-button>
+            <ion-button (click)="joinChat()"  [disabled]="nickname === ''" routerLink='/submessage ' > Code is {{ nickname }} ? </ion-button>
 
       </ion-col>
     </ion-row>
