@@ -3,6 +3,7 @@ import { AlertController } from '@ionic/angular';
 import { PusherServiceService } from '../../pusher-service.service';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-feed',
@@ -40,7 +41,8 @@ export class FeedPage implements OnInit {
     public route: Router,
      private pusher: PusherServiceService,
      public alertCtrl: AlertController,  
-     private http: HttpClient) {
+     private http: HttpClient,
+     public toastController: ToastController) {
     
     
     let self = this
@@ -81,9 +83,9 @@ export class FeedPage implements OnInit {
     let alert = this.alertCtrl.create({
       buttons: ['OK']
    });
-    this.http.post('https://b3b88c11.ngrok.io/create-post', body).subscribe(() => {
-       alert.present();
-    });
+   // this.http.post('https://b3b88c11.ngrok.io/create-post', body).subscribe(() => {
+   //    alert.present();
+ //   });
   }
 
   get_users_online() {
