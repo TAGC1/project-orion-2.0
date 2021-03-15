@@ -80,12 +80,14 @@ export class FeedPage implements OnInit {
       'content': this.post.content
     }
 
-    let alert = this.alertCtrl.create({
+    let toastController = this.toastController.create({
       buttons: ['OK']
    });
-   // this.http.post('https://b3b88c11.ngrok.io/create-post', body).subscribe(() => {
-   //    alert.present();
- //   });
+
+   this.http.post('https://b3b88c11.ngrok.io/create-post', body).subscribe(() => {
+     
+
+     });
   }
 
   get_users_online() {
