@@ -8,7 +8,7 @@ import Pusher from 'pusher-js';
 
       constructor(public http: HttpClient) {
         let pusher = new Pusher('88d0654f5aef67a2c715', {
-          authEndpoint: 'http://cff236b83e13.ngrok.io/pusher/auth',
+          authEndpoint: 'http://01e7532ee130.ngrok.io/pusher/auth',
           cluster: 'us3'
         });
 
