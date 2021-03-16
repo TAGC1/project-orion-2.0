@@ -81,10 +81,10 @@ export class FeedPage implements OnInit {
     }
 
     let toastController = this.toastController.create({
-      buttons: ['OK']
+      
    });
 
-   this.http.post('https://localhost:3001/create-post', body).subscribe(() => {
+   this.http.post('https://localhost:80/create-post', body).subscribe(() => {
      
 
      });
