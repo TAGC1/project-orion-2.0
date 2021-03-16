@@ -84,7 +84,7 @@ export class FeedPage implements OnInit {
       
    });
 
-   this.http.post('https://01e7532ee130.ngrok.io/create-post', body).subscribe(() => {
+   this.http.post('https://d68476c27ca6.ngrok.io/create-post', body).subscribe(() => {
      
 
      });
