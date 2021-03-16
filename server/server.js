@@ -50,6 +50,6 @@
         res.json({ 'status': 200 });
     });
 
-    let port = 3128;
+    let port = 80;
     app.listen(port);
     console.log('listening');
