@@ -2,10 +2,8 @@
 
 THIS APP IS NOT FULLY DEVELPOED.
 
-When starting up the app, run the app from the stable branch. The main branch is where we keep bugs and work in progress.  
-Then run server.js and the index.js first using NODE. 
+This branch is where we keep bugs and work in progress.
 
-EXAMPLE:
-node server.js
+Run "ionic serve" to create a virtual app that runs on the webrowser. 
 
-Afterwards run "ionic serve" to create a virtual app that runs on the webrowser.  
+WARNING: SOME COMPENENTS MAY NOT LOAD PROPERLY!
