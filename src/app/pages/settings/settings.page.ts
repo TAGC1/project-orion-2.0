@@ -22,6 +22,9 @@ export class SettingsPage implements OnInit {
   constructor( private router: Router,private afDatabase: AngularFireDatabase,
     private afAuth: AngularFireAuth,
     public toastController: ToastController,  ) { }
+    logout(){
+      this.router.navigate(["/login"])
+    }
 
   ionViewWillLoad(){
     this.afAuth.authState.subscribe(async data => {

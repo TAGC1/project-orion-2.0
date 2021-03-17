@@ -57,8 +57,16 @@
                <ion-label position="stacked">Password</ion-label>
                <ion-input autocomplete="off" type="password" [(ngModel)]="password" name="password"></ion-input>
                </ion-item>
+               <ion-item>
+                 <ion-label postion="stacked">
+
+                  Identifier
+
+                 </ion-label>
+                 <ion-input type="text" [(ngModel)]="tidentifier"></ion-input>
+               </ion-item>
                </ion-list>
-               <ion-button expand="block" share="round" color="primary" (click)="loginUser();">Login</ion-button>
+               <ion-button expand="block" share="round" color="primary" (click)="tloginUser();">Login</ion-button>
                            <ion-button expand="block" share="round" color="secondary" routerLink='/signup'>Create Account</ion-button>
              </form> 
              <ion-text>Swipe Left or Right to access Student and Admin Login </ion-text>

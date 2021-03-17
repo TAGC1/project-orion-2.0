@@ -26,6 +26,34 @@ const routes: Routes = [
     path: 'submessage',
     loadChildren: () => import('./pages/submessage/submessage/submessage.module').then( m => m.SubmessagePageModule)
   },
+  {
+    path: 'tcalendar',
+    loadChildren: () => import('../app/teacherpage/tcalendar/tcalendar.module').then( m => m.TcalendarPageModule)
+  },
+  {
+    path: 'tcalendar',
+    loadChildren: () => import('../app/teacherpage/tcalendar/tcalendar.module').then( m => m.TcalendarPageModule)
+  },
+  {
+    path: 'tfeed',
+    loadChildren: () => import('../app/teacherpage/tfeed/tfeed.module').then( m => m.TfeedPageModule)
+  },
+  {
+    path: 'tmessages',
+    loadChildren: () => import('../app/teacherpage/tmessages/tmessages.module').then( m => m.TmessagesPageModule)
+  },
+  {
+    path: 'tclasses',
+    loadChildren: () => import('../app/teacherpage/tclasses/tclasses.module').then( m => m.TclassesPageModule)
+  },
+  {
+    path: 'tsettings',
+    loadChildren: () => import('../app/teacherpage/tsettings/tsettings.module').then( m => m.TsettingsPageModule)
+  },
+  {
+    path: 'tsubmessage',
+    loadChildren: () => import('../app/teacherpage/tsubmessage/tsubmessage.module').then( m => m.TsubmessagePageModule)
+  },
 
 
 ];

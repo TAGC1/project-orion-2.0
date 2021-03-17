@@ -17,6 +17,10 @@ import { AngularFireAuth } from '@angular/fire/auth';
 })
 export class LoginPage implements OnInit {
 
+  
+//teacher identifier string used to check against internal database
+tidentifier: string = ""
+
 email: string = ""
 password: string = ""
 
@@ -34,6 +38,22 @@ password: string = ""
   ) { }
 
   ngOnInit() {
+  }
+  async tloginUser(){
+    const { email, password, tidentifier } = this
+    try {
+        const res = await this.afAuth.auth.signInWithEmailAndPassword(email, password);
+        this.router.navigate(['/'])
+        this.showAlert("Welcome back!","It has been a long time!")
+
+      } catch(err){
+        console.dir(err)
+        
+          console.log("User was not found")
+          this.showAlert("Something went wrong", err)
+        
+      }
+
   }
   async loginUser(){
     const { email, password } = this

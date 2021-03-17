@@ -18,10 +18,11 @@ export class MessagesPage implements OnInit {
   (private socket: Socket, 
     private Router: Router,
     private nav: NavController) { }
+    
   joinChat() {
     this.socket.connect();
     this.socket.emit('set-nickname', this.nickname);
-    this.Router.navigateByUrl('/SubmessagePage', {  });
+    this.nav.navigateForward('submessage',{  })
   }
 
   ngOnInit() {
