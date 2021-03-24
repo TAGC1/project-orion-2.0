@@ -19,7 +19,7 @@ export class LoginPage implements OnInit {
 
   
 //teacher identifier string used to check against internal database
-tidentifier: string = ""
+tidentifier: string = "6781234"
 
 email: string = ""
 password: string = ""
@@ -43,7 +43,7 @@ password: string = ""
     const { email, password, tidentifier } = this
     try {
         const res = await this.afAuth.auth.signInWithEmailAndPassword(email, password);
-        this.router.navigate(['/'])
+        this.router.navigate(['/thome'])
         this.showAlert("Welcome back!","It has been a long time!")
 
       } catch(err){

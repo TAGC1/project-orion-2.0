@@ -54,6 +54,10 @@ const routes: Routes = [
     path: 'tsubmessage',
     loadChildren: () => import('../app/teacherpage/tsubmessage/tsubmessage.module').then( m => m.TsubmessagePageModule)
   },
+  {
+    path: 'thome',
+    loadChildren: () => import('./thome/thome.module').then( m => m.ThomePageModule)
+  },
 
 
 ];
